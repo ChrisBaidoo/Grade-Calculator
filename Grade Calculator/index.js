@@ -18,6 +18,17 @@ var studentGrade =  [
     }
   }
 
-  //Print to to a table student 
+  window.addEventListener('DOMContentLoaded', (event) => {
+    var nameColumn = document.getElementById("nameColumn");
+    var li = document.createElement('li');
+    li.setAttribute('class','item');
+    nameColumn.appendChild(li)
+     document.body.appendChild(li)
+});
+var
+
+
+
+  //Print to to a table student
 
 getAverageGrades()
