@@ -18,17 +18,39 @@ var studentGrade =  [
     }
   }
 
-  window.addEventListener('DOMContentLoaded', (event) => {
-    var nameColumn = document.getElementById("nameColumn");
-    var li = document.createElement('li');
-    li.setAttribute('class','item');
-    nameColumn.appendChild(li)
-     document.body.appendChild(li)
-});
-var
+//   window.addEventListener('DOMContentLoaded', (event) => {
+//     var nameColumn = document.getElementById("nameColumn");
+//     var li = document.createElement('li');
+//     li.setAttribute('class','item');
+//     nameColumn.appendChild(li)
+//      document.body.appendChild(li)
+// });
 
 
 
-  //Print to to a table student
+// function phoneticLookup(val) {
+//   var result = "";
+//
+//   // Only change code below this line
+//   var lookup = {
+//     "alpha": "Adams",
+//     "bravo": "Boston",
+//     "charlie": "Chicago",
+//     "delta": "Denver",
+//     "echo": "Easy",
+//     "foxtrot": "Frank"
+//   };
+//   result = lookup[val];
+//
+//   // Only change code above this line
+//   return result;
+//   console.log(result)
+// }
+//
+// phoneticLookup(alpha);
+//
+//
+
+  // Print to to a table student
 
 getAverageGrades()
