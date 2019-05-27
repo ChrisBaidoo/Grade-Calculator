@@ -1,4 +1,4 @@
-var studentGrade =  [
+var studentGrades =  [
   ['dave',[45,86,59,5,8]],
   ['kas',[99,89,87,45,56]],
   ['john',[76,89,73,83,48]],
@@ -7,24 +7,37 @@ var studentGrade =  [
 ]
 
 
-  function getAverageGrades() {
-    for (var i = 0; i < studentGrade.length; i++){
-      var currentGrade = studentGrade[i][1]
+  window.addEventListener('DOMContentLoaded', (event) => {
+    var nameColumn = document.getElementById("nameColumn");
+    var gradeColumn = document.getElementById("gradeColumn");
+    var averageColumn = document.getElementById("averageColumn");
+    for (var i = 0; i < studentGrades.length; i++){
+      var currentGrade = studentGrades[i][1]
       var totalGrade = currentGrade.reduce(function (accumulator, currentValue){
         return accumulator + currentValue
       });
       var averageGrade = totalGrade / currentGrade.length;
-      console.log(studentGrade[i][0] + " has a total grade of " + totalGrade + " and an average of " + averageGrade)
-    }
-  }
+      console.log(studentGrades[i][0] + " has a total grade of " + totalGrade + " and an average of " + averageGrade)
 
-//   window.addEventListener('DOMContentLoaded', (event) => {
-//     var nameColumn = document.getElementById("nameColumn");
-//     var li = document.createElement('li');
-//     li.setAttribute('class','item');
-//     nameColumn.appendChild(li)
-//      document.body.appendChild(li)
-// });
+      var nameLi = document.createElement('li');
+      nameLi.setAttribute('class','item');
+      nameLi.innerText = studentGrades[i][0];
+      nameColumn.appendChild(nameLi);
+
+      var gradeLi = document.createElement('li');
+      gradeLi.setAttribute('class','item');
+      gradeLi.innerText = totalGrade;
+      gradeColumn.appendChild(gradeLi);
+
+      var avGradeLi = document.createElement('li');
+      avGradeLi.setAttribute('class','item');
+      avGradeLi.innerText = averageGrade;
+      averageColumn.appendChild(avGradeLi);
+    }
+
+
+     // document.body.appendChild(li)
+});
 
 
 
@@ -50,7 +63,3 @@ var studentGrade =  [
 // phoneticLookup(alpha);
 //
 //
-
-  // Print to to a table student
-
-getAverageGrades()
